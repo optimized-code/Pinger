@@ -14,6 +14,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import io.optimizedcode.pinger.ui.theme.PingerTheme
 
 class MainActivity : ComponentActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
