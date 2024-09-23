@@ -1,13 +1,22 @@
 [versions]
-agp = "8.6.0"
+agp = "8.6.1"
 kotlin = "1.9.0"
-coreKtx = "1.10.1"
+coreKtx = "1.13.1"
 junit = "4.13.2"
-junitVersion = "1.1.5"
-espressoCore = "3.5.1"
-lifecycleRuntimeKtx = "2.6.1"
-activityCompose = "1.8.0"
-composeBom = "2024.04.01"
+junitVersion = "1.2.1"
+espressoCore = "3.6.1"
+lifecycleRuntimeKtx = "2.8.6"
+activityCompose = "1.9.2"
+composeBom = "2024.09.02"
+v-hilt = "2.48.1"
+v-retrofit = "2.9.0"
+v-okhttp = "4.12.0"
+v-jackson = "2.7.2"
+v-core-jackson = "2.12.7"
+v-room-db = "2.6.1"
+v-nav-version = "2.8.1"
+v-hilt-navigation-compose = "1.2.0"
+v-android-gradle-plugin = "8.2.2"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -24,8 +33,28 @@ androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-toolin
 androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
+hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "v-hilt" }
+hilt-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "v-hilt" }
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "v-retrofit" }
+okhttp-logging-interceptor = { module = "com.squareup.okhttp3:logging-interceptor", version.ref = "v-okhttp" }
+okhttp-urlconnection = { module = "com.squareup.okhttp3:okhttp-urlconnection", version.ref = "v-okhttp" }
+converter-jackson = { module = "com.squareup.retrofit2:converter-jackson", version.ref = "v-jackson" }
+jackson-databind = { module = "com.fasterxml.jackson.core:jackson-databind", version.ref = "v-core-jackson" }
+jackson-core = { module = "com.fasterxml.jackson.core:jackson-core", version.ref = "v-core-jackson" }
+jackson-annotations = { module = "com.fasterxml.jackson.core:jackson-annotations", version.ref = "v-core-jackson" }
+room-runtime = {module = "androidx.room:room-runtime", version.ref = "v-room-db"}
+room-compiler = {module = "androidx.room:room-compiler", version.ref = "v-room-db"}
+navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "v-nav-version" }
+hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "v-hilt-navigation-compose" }
+
+
+[bundles]
+b-retrofit = ["retrofit", "okhttp-logging-interceptor", "okhttp-urlconnection", "converter-jackson", "jackson-databind", "jackson-core", "jackson-annotations"]
+
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+com-google-dagger-hilt-android = {id = "com.google.dagger.hilt.android", version.ref = "v-hilt"}
+com-android-library = { id = "com.android.library", version.ref = "v-android-gradle-plugin" }
 
