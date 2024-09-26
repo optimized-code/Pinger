@@ -1,4 +1,4 @@
-package io.optimizedcode.pinger
+package io.optimizedcode.pingo
 
 import org.junit.Test
 

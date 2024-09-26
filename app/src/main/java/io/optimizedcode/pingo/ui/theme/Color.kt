@@ -1,4 +1,4 @@
-package io.optimizedcode.pinger.ui.theme
+package io.optimizedcode.pingo.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

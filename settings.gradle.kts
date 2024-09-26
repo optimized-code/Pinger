@@ -19,6 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Pinger"
+rootProject.name = "Pingo"
 include(":app")
- 
