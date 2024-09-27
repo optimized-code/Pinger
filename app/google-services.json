@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "210966201513",
+    "firebase_url": "https://pingo-b3a97-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "pingo-b3a97",
+    "storage_bucket": "pingo-b3a97.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:210966201513:android:0d00eac188b93e1c6e55b8",
+        "android_client_info": {
+          "package_name": "io.optimizedcode.pingo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgZ-lyfY0dBqpBlW9eL_n_fqswvoO4dD4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:210966201513:android:62d29ad8fa36e2b06e55b8",
+        "android_client_info": {
+          "package_name": "io.optmizedcode.pingo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgZ-lyfY0dBqpBlW9eL_n_fqswvoO4dD4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
