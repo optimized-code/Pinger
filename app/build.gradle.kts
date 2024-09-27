@@ -5,6 +5,7 @@ import java.io.Serializable
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -147,6 +148,10 @@ dependencies {
     implementation(libs.kotlinx.serialization.json)
     implementation(libs.navigation.compose)
 
+    // logging
+    implementation(libs.timber)
+
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -156,6 +161,9 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
 
     // google Dependencies /////////////////////////////////////////////////////////////////////////
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.analytics)
+    implementation(libs.firebase.messaging.ktx)
 //    googleImplementation(libs.play.services.maps)
 //    googleImplementation(libs.google.maps.services)
 //    googleImplementation("com.google.maps.android:android-maps-utils:2.2.6")

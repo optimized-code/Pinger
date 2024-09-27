@@ -1,6 +1,7 @@
 [versions]
 
 # SDK Versions
+firebaseBom = "33.3.0"
 googleMapsServices = "2.2.0"
 maps = "4.0.1.301"
 minSdk = "21"
@@ -22,6 +23,7 @@ kotlinxSerializationJson = "1.7.3"
 lifecycleRuntimeKtx = "2.8.6"
 activityCompose = "1.9.2"
 composeBom = "2024.09.02"
+timber = "5.0.1"
 v-hilt = "2.48.1"
 v-retrofit = "2.9.0"
 v-okhttp = "4.12.0"
@@ -34,9 +36,13 @@ v-android-gradle-plugin = "8.2.2"
 appcompat = "1.7.0"
 material = "1.12.0"
 navigationRuntimeKtx = "2.8.1"
+firebaseMessagingKtx = "24.0.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+firebase-analytics = { module = "com.google.firebase:firebase-analytics" }
+firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
+firebase-database = { module = "com.google.firebase:firebase-database" }
 google-maps-services = { module = "com.google.maps:google-maps-services", version.ref = "googleMapsServices" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
@@ -69,10 +75,13 @@ navigation-compose = { group = "androidx.navigation", name = "navigation-compose
 hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "v-hilt-navigation-compose" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+firebase-messaging-ktx = { group = "com.google.firebase", name = "firebase-messaging-ktx", version.ref = "firebaseMessagingKtx" }
+timber = { module = "com.jakewharton.timber:timber", version.ref = "timber" }
 
 
 [bundles]
-b-retrofit = ["retrofit", "okhttp-logging-interceptor", "okhttp-urlconnection", "converter-jackson", "jackson-databind", "jackson-core", "jackson-annotations"]
+retrofit = ["retrofit", "okhttp-logging-interceptor", "okhttp-urlconnection", "converter-jackson", "jackson-databind", "jackson-core", "jackson-annotations"]
+dagger-hilt = []
 
 
 [plugins]
@@ -80,4 +89,5 @@ android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 com-google-dagger-hilt-android = {id = "com.google.dagger.hilt.android", version.ref = "v-hilt"}
 com-android-library = { id = "com.android.library", version.ref = "v-android-gradle-plugin" }
+kotlin-kapt = {id = "kotlin-kapt"}
 
