@@ -15,18 +15,18 @@ android {
     namespace = "io.optimizedcode.pingo"
     compileSdk = libs.versions.compileSdk.get().toInt()
 
-    val keystorePropertiesFile = rootProject.file("keystore.properties")
-    val keystoreProperties = Properties()
-    keystoreProperties.load(FileInputStream(keystorePropertiesFile))
-
-    signingConfigs {
-        create("config") {
-            keyAlias = keystoreProperties["keyAlias"] as String
-            keyPassword = keystoreProperties["keyPassword"] as String
-            storeFile = file(keystoreProperties["storeFile"] as String)
-            storePassword = keystoreProperties["storePassword"] as String
-        }
-    }
+//    val keystorePropertiesFile = rootProject.file("keystore.properties")
+//    val keystoreProperties = Properties()
+//    keystoreProperties.load(FileInputStream(keystorePropertiesFile))
+//
+//    signingConfigs {
+//        create("config") {
+//            keyAlias = keystoreProperties["keyAlias"] as String
+//            keyPassword = keystoreProperties["keyPassword"] as String
+//            storeFile = file(keystoreProperties["storeFile"] as String)
+//            storePassword = keystoreProperties["storePassword"] as String
+//        }
+//    }
 
     defaultConfig {
         applicationId = "io.optimizedcode.pingo"
@@ -48,7 +48,7 @@ android {
             isMinifyEnabled = false
             versionNameSuffix = "-dev"
             applicationIdSuffix = ".debug"
-            buildConfigField("String", "ecp" , keystoreProperties["ecp"] as String)
+            //buildConfigField("String", "ecp" , keystoreProperties["ecp"] as String)
         }
 
         getByName("release") {
@@ -59,7 +59,7 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
-            signingConfig = signingConfigs.getByName("config")
+            //signingConfig = signingConfigs.getByName("config")
         }
 
         create("staging") {
