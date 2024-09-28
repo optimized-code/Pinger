@@ -62,10 +62,10 @@ android {
             //signingConfig = signingConfigs.getByName("config")
         }
 
-        create("staging") {
-            initWith(getByName("debug"))
-            applicationIdSuffix = ".staging"
-        }
+//        create("staging") {
+//            initWith(getByName("debug"))
+//            applicationIdSuffix = ".staging"
+//        }
     }
 
 //    flavorDimensions.addAll(listOf("Platforms"))
