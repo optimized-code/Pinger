@@ -48,6 +48,7 @@ android {
             isMinifyEnabled = false
             versionNameSuffix = "-dev"
             applicationIdSuffix = ".debug"
+            buildConfigField("String", "ecp" , keystoreProperties["ecp"] as String)
         }
 
         getByName("release") {
@@ -141,6 +142,7 @@ android {
 
 dependencies {
     implementation(project(":features:home:ui"))
+    implementation(project(":core:common"))
 
     implementation(libs.hilt.android)
     implementation(libs.hilt.navigation.compose)

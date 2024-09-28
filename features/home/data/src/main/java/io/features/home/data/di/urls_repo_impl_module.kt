@@ -7,7 +7,6 @@ import dagger.hilt.components.SingletonComponent
 import io.core.network.data_providers.UrlsDataProvider
 import io.features.home.data.repository.UrlsRepoImpl
 import io.features.home.domain.repository.UrlsRepo
-import javax.inject.Singleton
 
 /**
  **************************************************************

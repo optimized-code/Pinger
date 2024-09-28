@@ -4,6 +4,8 @@ import android.app.Application
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.messaging.FirebaseMessaging
 import dagger.hilt.android.HiltAndroidApp
+import io.core.common.PingoEncryptedSharePrefs
+import io.core.common.getEnvVariable
 import io.optimizedcode.pingo.BuildConfig
 import timber.log.Timber
 import timber.log.Timber.*
@@ -24,7 +26,7 @@ import timber.log.Timber.Forest.plant
  */
 
 @HiltAndroidApp
-class PingoApp: Application() {
+class PingoApp : Application() {
 
     val TAG = PingoApp::class.java.name
 
@@ -47,5 +49,10 @@ class PingoApp: Application() {
             val msg = "New token: $token"
             Timber.d(TAG, msg)
         })
+
+        PingoEncryptedSharePrefs.createEncryptedSharedPrefs(
+            this,
+            getEnvVariable(BuildConfig.ecp)
+        )
     }
 }

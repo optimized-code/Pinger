@@ -7,6 +7,7 @@ import dagger.hilt.components.SingletonComponent
 import io.core.network.ApiService
 import io.core.network.data_providers.UrlsDataProvider
 
+
 /**
  **************************************************************
  * www.optimizedcode.io

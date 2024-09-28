@@ -19,6 +19,12 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("io.optimizedcode.pingo", appContext.packageName)
+        assertEquals("io.optimizedcode.pingo.debug", appContext.packageName)
+    }
+
+    @Test
+    fun verifyEnvVariable() {
+        val appContext = InstrumentationRegistry.getInstrumentation().targetContext
+        assertEquals("io.optimizedcode.pingo.debug", appContext.packageName)
     }
 }
