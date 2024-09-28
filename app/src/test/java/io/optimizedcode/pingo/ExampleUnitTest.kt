@@ -14,10 +14,4 @@ class ExampleUnitTest {
     fun addition_isCorrect() {
         assertEquals(4, 2 + 2)
     }
-
-    @Test
-    fun verify_env_variable(){
-        val result = System.getenv("PATH")?.contains("""/sdk/platform-tools""", ignoreCase = true)
-        assertEquals(true, result)
-    }
 }
