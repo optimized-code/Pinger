@@ -27,6 +27,6 @@ class UrlsUseCase @Inject constructor(private val urlsRepo: UrlsRepo) {
         val result = urlsRepo.getAllUrls()
         emit(UiEvents.Success(result))
     }.catch {
-        emit(UiEvents.Error(it.message ?: "Something went wrong!"))
+        emit(UiEvents.Error(it.message ?: ""))
     }.flowOn(Dispatchers.IO)
 }

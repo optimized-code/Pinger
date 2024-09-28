@@ -17,6 +17,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import io.features.home.ui.screens.HomeScreen
 import io.features.home.ui.screens.HomeViewModel
 import io.optimizedcode.pingo.ui.theme.PingoTheme
+import timber.log.Timber
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
@@ -27,10 +28,6 @@ class MainActivity : ComponentActivity() {
         setContent {
             PingoTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-//                    Greeting(
-//                        name = "Android",
-//                        modifier = Modifier.padding(innerPadding)
-//                    )
                     val viewModel = hiltViewModel<HomeViewModel>()
                     HomeScreen(
                         modifier = Modifier.padding(innerPadding),

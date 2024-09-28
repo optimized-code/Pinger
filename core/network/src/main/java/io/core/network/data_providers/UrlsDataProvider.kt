@@ -6,6 +6,7 @@ import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import io.core.network.ApiService
 import io.core.network.dto.UrlsDto
+import timber.log.Timber
 import javax.inject.Inject
 
 /**

@@ -43,6 +43,10 @@ dependencies {
     kapt(libs.hilt.compiler)
     implementation(libs.kotlinx.serialization.json)
 
+    // logging
+    implementation(libs.timber)
+    implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.17.+")
+
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)

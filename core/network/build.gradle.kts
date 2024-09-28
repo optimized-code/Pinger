@@ -3,6 +3,8 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.com.google.dagger.hilt.android)
     id("kotlin-kapt")
+    kotlin("plugin.serialization") version "2.0.20"
+
 }
 
 android {
@@ -42,6 +44,8 @@ dependencies {
     implementation(libs.timber)
     implementation(platform(libs.firebase.bom))
     implementation(libs.firebase.database)
+    implementation(libs.kotlinx.serialization.json)
+
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)

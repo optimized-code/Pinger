@@ -13,7 +13,7 @@ package io.core.common
  ***************************************************************
  */
 
-sealed class UiEvents<T>(val message: String? = null, val data: T? = null) {
+sealed class UiEvents<T>(val message: String = "", val data: T? = null) {
     class Loading<T>(): UiEvents<T>()
     class Success<T>(data: T): UiEvents<T>(data = data)
     class Error<T>(message: String): UiEvents<T>(message = message)

@@ -14,9 +14,9 @@ import java.util.UUID
  * @license Open source
  ***************************************************************
  */
- 
+
 data class UrlEntity(
-    var id: UUID,
+    var id: String,
     var url: String,
     var isHalt: Boolean,
     var severity: Int,
@@ -26,5 +26,5 @@ data class UrlEntity(
     var updatedAt: Long,
     var totalFailures: Long,
     var totalHitsSince: Long,
-    var lastNetworkUsed: Int
+    var lastNetworkUsed: String
 )

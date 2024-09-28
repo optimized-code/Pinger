@@ -45,7 +45,7 @@ class HomeViewModel @Inject constructor(private val urlsUseCase: UrlsUseCase): V
             homeState = when(it){
                 is UiEvents.Loading -> { HomeStateHolder(isLoading = true)  }
                 is UiEvents.Success -> { HomeStateHolder(success = it.data ?: emptyList()) }
-                is UiEvents.Error -> { HomeStateHolder(error = it.message ?: "Something went wrong") }
+                is UiEvents.Error -> { HomeStateHolder(error = it.message) }
             }
         }.launchIn(viewModelScope)
     }

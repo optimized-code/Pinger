@@ -3,6 +3,7 @@ package io.core.network.dto
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 import com.fasterxml.jackson.annotation.JsonInclude
 import com.fasterxml.jackson.annotation.JsonProperty
+import kotlinx.serialization.Serializable
 import java.util.UUID
 
 /**
@@ -19,12 +20,12 @@ import java.util.UUID
  */
 
 // String  uniqueID = UUID.randomUUID().toString();
-
+@Serializable
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonIgnoreProperties(ignoreUnknown = true)
 data class UrlsDto(
     @JsonProperty("id")
-    var id: UUID,
+    var id: String,
 
     @JsonProperty("url")
     var url: String,
@@ -54,5 +55,5 @@ data class UrlsDto(
     var totalHitsSince: Long,
 
     @JsonProperty("lastNetworkUsed")
-    var lastNetworkUsed: Int
+    var lastNetworkUsed: String
 )

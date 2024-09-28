@@ -18,5 +18,5 @@ import io.features.home.domain.entities.UrlEntity
 data class HomeStateHolder(
     val isLoading: Boolean = false,
     val success: List<UrlEntity> = emptyList(),
-    val error: String = "Something went wrong"
+    val error: String = ""
 )

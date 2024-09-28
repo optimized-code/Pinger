@@ -5,4 +5,5 @@ plugins {
     alias(libs.plugins.com.android.library) apply false
     id("com.google.gms.google-services") version "4.4.2" apply false
     alias(libs.plugins.com.google.dagger.hilt.android) apply false
+    alias(libs.plugins.compose.compiler) apply false
 }

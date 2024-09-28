@@ -8,6 +8,8 @@ plugins {
     id("com.google.gms.google-services")
     alias(libs.plugins.com.google.dagger.hilt.android)
     kotlin("kapt")
+    alias(libs.plugins.compose.compiler)
+
 }
 
 android {
@@ -122,7 +124,8 @@ android {
         buildConfig = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.1"
+        kotlinCompilerExtensionVersion = "1.5.15"
+//        kotlinCompilerExtensionVersion = "1.5.1"
     }
     packaging {
         resources {

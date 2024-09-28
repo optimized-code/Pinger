@@ -14,6 +14,7 @@ package io.core.network
  */
 
 object Endpoints {
+    //https://pingo-b3a97-default-rtdb.europe-west1.firebasedatabase.app/urls.json
     const val BASE_URL = "https://pingo-b3a97-default-rtdb.europe-west1.firebasedatabase.app/"
     const val URLS = "urls.json"
 }

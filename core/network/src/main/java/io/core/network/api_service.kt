@@ -13,13 +13,14 @@
 
 package io.core.network
 
+import com.fasterxml.jackson.databind.node.ObjectNode
 import retrofit2.http.DELETE
 import retrofit2.http.GET
 import retrofit2.http.POST
 
 interface ApiService {
     @GET(Endpoints.URLS)
-    suspend fun getAllUrls(): String
+    suspend fun getAllUrls(): ObjectNode
 
     @POST(Endpoints.URLS)
     suspend fun createUrl(): String

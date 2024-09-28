@@ -1,7 +1,9 @@
 package io.features.home.data.entity_mappers
 
+import io.core.network.dto.UrlsDto
 import io.features.home.domain.entities.UrlEntity
 import kotlinx.serialization.json.Json
+import timber.log.Timber
 
 /**
  **************************************************************
@@ -19,4 +21,20 @@ import kotlinx.serialization.json.Json
 fun String.toUrlEntityList(): List<UrlEntity> {
     val resultDictionary = Json.decodeFromString<Map<String, UrlEntity>>(this)
     return resultDictionary.values.toList()
+}
+
+fun UrlsDto.toUrlEntity(): UrlEntity {
+    return UrlEntity(
+        id = this.id,
+        url = this.url,
+        isHalt = this.isHalt,
+        severity = this.severity,
+        lastChecked = this.lastChecked,
+        status = this.status,
+        createdAt = this.createdAt,
+        updatedAt = this.updatedAt,
+        totalFailures = this.totalFailures,
+        totalHitsSince = this.totalHitsSince,
+        lastNetworkUsed = this.lastNetworkUsed
+    )
 }
