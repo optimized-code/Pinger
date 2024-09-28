@@ -6,6 +6,8 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     id("com.google.gms.google-services")
+    alias(libs.plugins.com.google.dagger.hilt.android)
+    kotlin("kapt")
 }
 
 android {
@@ -64,30 +66,30 @@ android {
         }
     }
 
-    flavorDimensions.addAll(listOf("Platforms"))
+//    flavorDimensions.addAll(listOf("Platforms"))
 
-    productFlavors {
-        create("huawei") {
-            buildConfigField(
-                "String",
-                "CURRENT_PLATFORM",
-                project.properties["platform_huawei"].toString()
-            )
-            versionCode = 1
-            versionName = "1.0.0"
-            dimension = "Platforms"
-        }
+//    productFlavors {
+//        create("huawei") {
+//            buildConfigField(
+//                "String",
+//                "CURRENT_PLATFORM",
+//                project.properties["platform_huawei"].toString()
+//            )
+//            versionCode = 1
+//            versionName = "1.0.0"
+//            dimension = "Platforms"
+//        }
 
-        create("google") {
-            buildConfigField(
-                "String",
-                "CURRENT_PLATFORM",
-                project.properties["platform_google`"].toString()
-            )
-            versionCode = 1
-            versionName = "1.0.0"
-            dimension = "Platforms"
-        }
+//        create("google") {
+//            buildConfigField(
+//                "String",
+//                "CURRENT_PLATFORM",
+//                project.properties["platform_google`"].toString()
+//            )
+//            versionCode = 1
+//            versionName = "1.0.0"
+//            dimension = "Platforms"
+//        }
 
 //        create("free") {
 //            dimension = "Sale"
@@ -96,17 +98,17 @@ android {
 //        create("paid") {
 //            dimension = "Sale"
 //        }
-    }
+//    }
 
-    androidComponents {
-        // TODO: Implement it later
-        beforeVariants { variantBuilder ->
-            val list: List<String> = listOf("free", "paid")
-            if (variantBuilder.productFlavors.containsAll<Serializable>(list)) {
-                variantBuilder.enable = false
-            }
-        }
-    }
+//    androidComponents {
+//        // TODO: Implement it later
+//        beforeVariants { variantBuilder ->
+//            val list: List<String> = listOf("free", "paid")
+//            if (variantBuilder.productFlavors.containsAll<Serializable>(list)) {
+//                variantBuilder.enable = false
+//            }
+//        }
+//    }
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
@@ -132,10 +134,16 @@ android {
     }
 }
 
-val googleImplementation by configurations
-val huaweiImplementation by configurations
+//val googleImplementation by configurations
+//val huaweiImplementation by configurations
 
 dependencies {
+    implementation(project(":features:home:ui"))
+
+    implementation(libs.hilt.android)
+    implementation(libs.hilt.navigation.compose)
+    kapt(libs.hilt.compiler)
+
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)

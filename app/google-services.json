@@ -27,9 +27,9 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:210966201513:android:62d29ad8fa36e2b06e55b8",
+        "mobilesdk_app_id": "1:210966201513:android:1c7b6b07c101c7cb6e55b8",
         "android_client_info": {
-          "package_name": "io.optmizedcode.pingo"
+          "package_name": "io.optimizedcode.pingo.debug"
         }
       },
       "oauth_client": [],

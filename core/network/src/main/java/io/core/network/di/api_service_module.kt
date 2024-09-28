@@ -28,7 +28,7 @@ import javax.inject.Named
 @Module
 object ApiServiceModule {
     @Provides
-    @Named("apiClient")
+    //@Named("apiClient")
     fun provideApiService(): ApiService {
         return Retrofit.Builder()
             .addConverterFactory(JacksonConverterFactory.create())

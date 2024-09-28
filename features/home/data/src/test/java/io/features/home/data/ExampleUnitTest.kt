@@ -14,4 +14,15 @@ class ExampleUnitTest {
     fun addition_isCorrect() {
         assertEquals(4, 2 + 2)
     }
+
+    @Test
+    fun get_value_list_of_map_entries() {
+        val map: Map<String, String> = mapOf(
+            "one" to "cricket",
+            "two" to "badminton",
+            "three" to "football"
+        )
+
+        assertEquals(map.values.toList(), listOf("cricket","badminton","football"))
+    }
 }

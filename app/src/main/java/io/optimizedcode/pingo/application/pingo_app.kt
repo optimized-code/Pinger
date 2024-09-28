@@ -3,6 +3,7 @@ package io.optimizedcode.pingo.application
 import android.app.Application
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.messaging.FirebaseMessaging
+import dagger.hilt.android.HiltAndroidApp
 import io.optimizedcode.pingo.BuildConfig
 import timber.log.Timber
 import timber.log.Timber.*
@@ -21,7 +22,8 @@ import timber.log.Timber.Forest.plant
  * @license Open source
  ***************************************************************
  */
- 
+
+@HiltAndroidApp
 class PingoApp: Application() {
 
     val TAG = PingoApp::class.java.name

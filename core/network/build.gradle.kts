@@ -38,7 +38,7 @@ dependencies {
 
     implementation(libs.bundles.retrofit)
     implementation(libs.hilt.android)
-    implementation(libs.hilt.compiler)
+    kapt(libs.hilt.compiler)
     implementation(libs.timber)
     implementation(platform(libs.firebase.bom))
     implementation(libs.firebase.database)
