@@ -1,7 +1,5 @@
 package io.features.home.domain.entities
 
-import java.util.UUID
-
 /**
  **************************************************************
  * www.optimizedcode.io

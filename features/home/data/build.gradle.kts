@@ -45,7 +45,7 @@ dependencies {
 
     // logging
     implementation(libs.timber)
-    implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.17.+")
+    implementation(libs.jackson.module.kotlin)
 
 
     implementation(libs.androidx.core.ktx)

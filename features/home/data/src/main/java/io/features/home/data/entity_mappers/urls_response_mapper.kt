@@ -3,7 +3,6 @@ package io.features.home.data.entity_mappers
 import io.core.network.dto.UrlsDto
 import io.features.home.domain.entities.UrlEntity
 import kotlinx.serialization.json.Json
-import timber.log.Timber
 
 /**
  **************************************************************

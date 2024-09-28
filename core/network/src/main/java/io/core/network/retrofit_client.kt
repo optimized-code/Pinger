@@ -17,7 +17,6 @@ import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.logging.HttpLoggingInterceptor
 import okio.Buffer
-import timber.log.Timber
 import java.io.UnsupportedEncodingException
 import java.net.URLDecoder
 import java.nio.charset.Charset

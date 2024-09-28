@@ -1,6 +1,5 @@
 import java.util.Properties
 import java.io.FileInputStream
-import java.io.Serializable
 
 plugins {
     alias(libs.plugins.android.application)
