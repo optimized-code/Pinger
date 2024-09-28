@@ -52,7 +52,8 @@ class PingoApp : Application() {
 
         PingoEncryptedSharePrefs.createEncryptedSharedPrefs(
             this,
-            getEnvVariable(BuildConfig.ecp)
+            "emanelifyek"
+            //getEnvVariable(BuildConfig.ecp)
         )
     }
 }
