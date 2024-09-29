@@ -30,6 +30,11 @@ jobs:
      with:
        fileName: "serviceAccount.json"
        encodedString: ${{ secrets.GPLAY_SERVICE_ACCOUNT_KEY_JSON }}
+
+   - name: Decode and save the Google service account key
+     env:
+       GOOGLE_SERVICE_KEY: ${{ secrets.GPLAY_SERVICE_ACCOUNT_KEY_JSON }}
+     run: echo "$GOOGLE_SERVICE_KEY" > /tmp/google_key.json
  
    - name: Decode Keystore File
      uses: timheuer/base64-to-file@v1
